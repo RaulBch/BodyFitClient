@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.1-b419 (branches/2.3.1.x-7937; 2014-08-04T08:11:03+0000) JAXWS-RI/2.2.10-b140803.1500 JAXWS-API/2.2.11 JAXB-RI/2.2.10-b140802.1033 JAXB-API/2.2.12-b140109.1041 svn-revision#unknown. --><xs:schema xmlns:tns="http://service/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://service/">
+
+<xs:element name="HeightConverter" type="tns:HeightConverter"/>
+
+<xs:element name="HeightConverterResponse" type="tns:HeightConverterResponse"/>
+
+<xs:element name="calculoIMC" type="tns:calculoIMC"/>
+
+<xs:element name="calculoIMCResponse" type="tns:calculoIMCResponse"/>
+
+<xs:element name="clasificacionIMC" type="tns:clasificacionIMC"/>
+
+<xs:element name="clasificacionIMCResponse" type="tns:clasificacionIMCResponse"/>
+
+<xs:element name="weightConverter" type="tns:weightConverter"/>
+
+<xs:element name="weightConverterResponse" type="tns:weightConverterResponse"/>
+
+<xs:complexType name="calculoIMC">
+<xs:sequence>
+<xs:element name="altura" type="xs:float"/>
+<xs:element name="peso" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculoIMCResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:float" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="clasificacionIMC">
+<xs:sequence>
+<xs:element name="imc" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="clasificacionIMCResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="weightConverter">
+<xs:sequence>
+<xs:element name="lb" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="weightConverterResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:float" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="HeightConverter">
+<xs:sequence>
+<xs:element name="feet" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="HeightConverterResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:float" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
